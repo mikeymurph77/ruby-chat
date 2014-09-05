@@ -1,5 +1,4 @@
 class AvatarUploader < CarrierWave::Uploader::Base
-
   include CarrierWave::RMagick
 
   storage :file
@@ -10,10 +9,10 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb do
-    process :resize_to_fit => [50, 50]
+    process resize_to_fit: [50, 50]
   end
 
   version :show_page do
-    process :resize_to_fit => [150, 150]
+    process resize_to_fit: [150, 150]
   end
 end
