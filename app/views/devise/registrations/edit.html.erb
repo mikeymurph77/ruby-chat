@@ -29,6 +29,45 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <h3>About You</h3>
+
+  <div>
+    <p><%= f.label :first_name %><br />
+    <%= f.text_field :first_name %></p>
+  </div>
+
+  <div>
+    <p><%= f.label :last_name %><br />
+    <%= f.text_field :last_name %></p>
+  </div>
+
+  <div>
+    <p><%= f.label :bio %><br />
+    <%= f.text_area :bio %></p>
+  </div>
+
+  <h3>Social Links</h3>
+
+  <div>
+    <p><%= f.label :twitter %><br />
+    <%= f.text_field :twitter %></p>
+  </div>
+
+  <div>
+    <p><%= f.label :github %><br />
+    <%= f.url_field :github %></p>
+  </div>
+
+  <div>
+    <p><%= f.label :linkedin %><br />
+    <%= f.url_field :linkedin %></p>
+  </div>
+
+  <div>
+    <p><%= f.label :blog %><br />
+    <%= f.url_field :blog %></p>
+  </div>
+
   <div>
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>

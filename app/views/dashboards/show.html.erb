@@ -1,4 +1,8 @@
 <div>
   <h1>User Dashboard</h1>
   <%= current_user.inspect %>
+
+  <% @users.each do |user| %>
+    <%= link_to user.username, user %>
+  <% end %>
 </div>
