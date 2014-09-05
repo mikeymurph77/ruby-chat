@@ -1,4 +1,10 @@
-<%= @user.username %>
+<div>
+  <%= image_tag(@user.avatar_url(:show_page).to_s) %>
+</div>
+
+<div>
+  <%= @user.username %>
+</div>
 
 <div>
   <%= @user.first_name %> <%= @user.last_name %> 

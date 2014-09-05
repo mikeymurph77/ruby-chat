@@ -13,7 +13,8 @@ class RegistrationsController < Devise::RegistrationsController
       :linkedin,
       :github,
       :blog,
-      :bio
+      :bio,
+      :avatar
     )
   end
 
@@ -30,7 +31,8 @@ class RegistrationsController < Devise::RegistrationsController
       :linkedin,
       :github,
       :blog,
-      :bio
+      :bio,
+      :avatar
     )
   end
 end
