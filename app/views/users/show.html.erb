@@ -1,0 +1,22 @@
+<%= @user.username %>
+
+<div>
+  <%= @user.first_name %> <%= @user.last_name %> 
+</div>
+
+<div>
+  <%= @user.bio %>
+</div>
+
+<% if @user.twitter.present? %>
+  <%= link_to @user.twitter, @user.twitter_link %>
+<% end %>
+<% if @user.github.present? %>
+  <%= link_to "GitHub", @user.github %>
+<% end %>
+<% if @user.linkedin.present? %>
+  <%= link_to "LinkedIn", @user.linkedin %>
+<% end %>
+<% if @user.blog.present? %>
+  <%= link_to "Blog", @user.blog %>
+<% end %>
