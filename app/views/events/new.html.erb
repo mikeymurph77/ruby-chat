@@ -1,0 +1,33 @@
+<h3>Create A New Event</h3>
+<%= form_for @event do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  </div>
+
+  <div>
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <%= form.collection_select(:event, ["Meetup", "Networking", "Hackathon", "Project Night"], :id) %>
+
+  <div>
+    <%= form.submit "Create" %>
+  </div>
+<% end %>

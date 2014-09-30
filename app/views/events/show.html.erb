@@ -1,0 +1,23 @@
+<div>
+  <h3><%= @event.title %></h3>
+</div>
+
+<div>
+  <p>Date:</p>
+  <%= @event.date.to_formatted_s(:long_ordinal) %>
+</div>
+
+<div>
+  <p>Description:</p>
+  <%= @event.description %>
+</div>
+
+<div>
+  <p>Event Page:</p>
+  <%= link_to "Event Website", @event.link %>
+</div>
+
+<div>
+  <p>Event Type:</p>
+  <%= @event.category %>
+</div>

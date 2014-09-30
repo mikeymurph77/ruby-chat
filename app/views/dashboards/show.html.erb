@@ -1,8 +1,25 @@
 <div>
   <h1>User Dashboard</h1>
+
+  <div>
+    <h3>Events</h3>
+    <%= link_to "Create an Event", [:new, :event] %>
+    <% @events.each do |event| %>
+      <ul>
+        <%= link_to event.title, event %>
+        <%= event.date.to_formatted_s(:long_ordinal) %>
+        <%= link_to "Details", event %>
+      </ul>
+    <% end %>
+  </div>
+
   <%= current_user.inspect %>
 
-  <% @users.each do |user| %>
-    <%= link_to user.username, user %>
-  <% end %>
+  <div>
+    <% @users.each do |user| %>
+      <ul>
+        <%= link_to user.username, user %>
+      </ul>
+    <% end %>
+  </div>
 </div>
