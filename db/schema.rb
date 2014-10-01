@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140929201632) do
     t.text     "description", default: "", null: false
     t.string   "link",        default: "", null: false
     t.date     "date",                     null: false
-    t.string   "category",                 null: false
+    t.integer  "user_id",                  null: false
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

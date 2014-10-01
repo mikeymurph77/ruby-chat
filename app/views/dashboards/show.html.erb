@@ -2,15 +2,7 @@
   <h1>User Dashboard</h1>
 
   <div>
-    <h3>Events</h3>
-    <%= link_to "Create an Event", [:new, :event] %>
-    <% @events.each do |event| %>
-      <ul>
-        <%= link_to event.title, event %>
-        <%= event.date.to_formatted_s(:long_ordinal) %>
-        <%= link_to "Details", event %>
-      </ul>
-    <% end %>
+    <p><%= link_to "Upcoming Events", :events %></p>
   </div>
 
   <%= current_user.inspect %>

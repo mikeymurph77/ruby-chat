@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resource :dashboard, only: [:show]
   resources :users, only: [:show]
-  resources :events, only: [:show, :new, :create]
+  resources :events, only: [:index, :show, :new, :create, :edit, :update]
 
   root to: "dashboards#show"
 end

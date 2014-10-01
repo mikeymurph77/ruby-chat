@@ -1,4 +1,9 @@
 class EventsController < ApplicationController
+  def index
+    @upcoming_events = Event.all.upcoming
+    @past_events = Event.all.already_happened
+  end
+
   def show
     @event = Event.find(params[:id])
   end
@@ -17,6 +22,20 @@ class EventsController < ApplicationController
     end
   end
 
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Event.find(params[:id])
+
+    if @event.update(event_params)
+      redirect_to @event
+    else
+      render :edit
+    end
+  end
+
   private
 
   def event_params
@@ -25,7 +44,7 @@ class EventsController < ApplicationController
       :description,
       :link,
       :date,
-      :category
+      :user_id
     )
   end
 end

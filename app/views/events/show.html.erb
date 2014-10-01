@@ -3,21 +3,23 @@
 </div>
 
 <div>
-  <p>Date:</p>
-  <%= @event.date.to_formatted_s(:long_ordinal) %>
+  <p>Date: <%= @event.date.to_formatted_s(:long_ordinal) %></p>
 </div>
 
 <div>
-  <p>Description:</p>
-  <%= @event.description %>
+  <p>Description: <%= @event.description %></p>
 </div>
 
 <div>
-  <p>Event Page:</p>
-  <%= link_to "Event Website", @event.link %>
+  <p>Event Page: <%= link_to "Event Website", @event.link %></p>
 </div>
 
+<% if @event == current_user %>
+  <%= link_to "Edit Event", [:edit, :event] %>
+<% end %>
+
+<%= @event.inspect %>
+
 <div>
-  <p>Event Type:</p>
-  <%= @event.category %>
+  <%= link_to "See more events", :events %>
 </div>

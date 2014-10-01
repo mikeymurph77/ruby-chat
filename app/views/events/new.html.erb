@@ -21,13 +21,6 @@
   </div>
 
   <div>
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-  </div>
-
-  <%= form.collection_select(:event, ["Meetup", "Networking", "Hackathon", "Project Night"], :id) %>
-
-  <div>
     <%= form.submit "Create" %>
   </div>
 <% end %>

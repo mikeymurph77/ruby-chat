@@ -5,7 +5,7 @@ class CreateEvents < ActiveRecord::Migration
       t.text :description, null: false, default: ""
       t.string :link, null: false, default: ""
       t.date :date, null: false
-      t.string :category, null: false
+      t.belongs_to :user, null: false
 
       t.timestamps null: false
     end

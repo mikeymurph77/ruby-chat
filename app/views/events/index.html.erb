@@ -1,0 +1,22 @@
+<div>
+  <%= link_to "Create an Event", [:new, :event] %>
+  <h3>Upcoming Events</h3>
+  <% @upcoming_events.each do |event| %>
+    <ul>
+      <%= link_to event.title, event %>
+      <%= event.date.to_formatted_s(:long_ordinal) %>
+      <%= link_to "Details", event %>
+    </ul>
+  <% end %>
+</div>
+
+<div>
+  <h3>Past Events</h3>
+  <% @past_events.each do |event| %>
+    <ul>
+      <%= link_to event.title, event %>
+      <%= event.date.to_formatted_s(:long_ordinal) %>
+      <%= link_to "Details", event %>
+    </ul>
+  <% end %>
+</div>
